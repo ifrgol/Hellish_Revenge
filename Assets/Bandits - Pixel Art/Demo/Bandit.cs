@@ -13,6 +13,8 @@ public class Bandit : MonoBehaviour {
     private bool                m_combatIdle = false;
     private bool                m_isDead = false;
 
+    public GameObject camera;
+
     // Use this for initialization
     void Start () {
         m_animator = GetComponent<Animator>();
@@ -93,5 +95,8 @@ public class Bandit : MonoBehaviour {
         //Idle
         else
             m_animator.SetInteger("AnimState", 0);
+
+            camera.transform.position = new Vector3(transform.position.x , 0 , -10);
     }
+    
 }
