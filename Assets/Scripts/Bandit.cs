@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Bandit : MonoBehaviour {
 
@@ -98,10 +99,6 @@ public class Bandit : MonoBehaviour {
             m_animator.SetInteger("AnimState", 0);
 
             camera.transform.position = new Vector3(transform.position.x , 0 , -10);
-
-        /*if (other.gameObject.tag == "Finish") {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }*/
         
     }
     private void OnCollisionEnter2D(Collision2D collision) {
@@ -109,7 +106,13 @@ public class Bandit : MonoBehaviour {
             panel.SetActive(true);
             Destroy(gameObject);
         }
+        if (collision.gameObject.tag == "Finish") {
+            SceneManager.LoadScene("Win");
+        }
     }
-    
-    
+    /*private void OnTriggerEnter2D(Collider2D other) {
+          if (other.gameObject.tag == "Finish") {
+                SceneManager.LoadScene("Win");
+        }
+    }*/
 }
