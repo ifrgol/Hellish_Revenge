@@ -14,6 +14,7 @@ public class Bandit : MonoBehaviour {
     private bool                m_isDead = false;
 
     public GameObject camera;
+    public GameObject panel;
 
     // Use this for initialization
     void Start () {
@@ -97,6 +98,18 @@ public class Bandit : MonoBehaviour {
             m_animator.SetInteger("AnimState", 0);
 
             camera.transform.position = new Vector3(transform.position.x , 0 , -10);
+
+        /*if (other.gameObject.tag == "Finish") {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }*/
+        
     }
+    private void OnCollisionEnter2D(Collision2D collision) {
+         if (collision.gameObject.tag == "Enemy") {
+            panel.SetActive(true);
+            Destroy(gameObject);
+        }
+    }
+    
     
 }
