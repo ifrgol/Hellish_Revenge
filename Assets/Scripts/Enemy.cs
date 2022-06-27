@@ -50,10 +50,7 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
          if (collision.gameObject.tag == "Enemy") {
-            //nstantiate(fire, transform.position , Quaternion.identity);
-            //panel.SetActive(true);
             Destroy(gameObject);
-            //FindObjectOfType<AudioManager>().Play("Die");
         }
     }
 }
