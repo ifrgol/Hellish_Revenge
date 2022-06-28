@@ -105,14 +105,10 @@ public class Bandit : MonoBehaviour {
          if (collision.gameObject.tag == "Enemy") {
             panel.SetActive(true);
             Destroy(gameObject);
+            FindObjectOfType<AudioManager>().Play("Die");
         }
         if (collision.gameObject.tag == "Finish") {
             SceneManager.LoadScene("Win");
         }
     }
-    /*private void OnTriggerEnter2D(Collider2D other) {
-          if (other.gameObject.tag == "Finish") {
-                SceneManager.LoadScene("Win");
-        }
-    }*/
 }
