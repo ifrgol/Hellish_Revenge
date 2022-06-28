@@ -108,7 +108,9 @@ public class Bandit : MonoBehaviour {
             FindObjectOfType<AudioManager>().Play("Die");
         }
         if (collision.gameObject.tag == "Finish") {
+            FindObjectOfType<AudioManager>().Play("Win");
             SceneManager.LoadScene("Win");
+            
         }
     }
 }

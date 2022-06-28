@@ -2415,6 +2415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952048207}
   - component: {fileID: 1952048206}
+  - component: {fileID: 1952048209}
   - component: {fileID: 1952048208}
   m_Layer: 0
   m_Name: AudioManager
@@ -2469,6 +2470,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - {fileID: 1952048206}
+  - {fileID: 1952048209}
+--- !u!114 &1952048209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952048205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a0db8bbd25bf64fb6fe6b06a412b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Win
+  clip: {fileID: 8300000, guid: edfe18ccd44c2104b9f45692431837a0, type: 3}
+  volume: 1.1
+  pitch: 1
+  loop: 0
+  source: {fileID: 0}
 --- !u!1 &2093716448
 GameObject:
   m_ObjectHideFlags: 0
